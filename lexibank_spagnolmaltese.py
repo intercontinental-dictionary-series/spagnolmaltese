@@ -1,81 +1,190 @@
-from pathlib import Path
+import pathlib
+
 import pylexibank
-
-# Customize your basic data.
-# if you need to store other data in columns than the lexibank defaults, then over-ride
-# the table type (pylexibank.[Language|Lexeme|Concept|Cognate|]) and add the required columns e.g.
-#
-#import attr
-#
-#@attr.s
-#class Concept(pylexibank.Concept):
-#    MyAttribute1 = attr.ib(default=None)
+from idspy import IDSDataset, IDSEntry
 
 
-class Dataset(pylexibank.Dataset):
-    dir = Path(__file__).parent
+class Dataset(IDSDataset):
+    dir = pathlib.Path(__file__).parent
     id = "spagnolmaltese"
 
-    # register custom data types here (or language_class, lexeme_class, cognate_class):
-    #concept_class = Concept
-
-    # define the way in which forms should be handled
-    form_spec = pylexibank.FormSpec(
-        brackets={"(": ")"},  # characters that function as brackets
-        separators=";/,",  # characters that split forms e.g. "a, b".
-        missing_data=('?', '-'),  # characters that denote missing data.
-        strip_inside_brackets=True   # do you want data removed in brackets or not?
-    )
-
     def cmd_download(self, args):
-        """
-        Download files to the raw/ directory. You can use helpers methods of `self.raw_dir`, e.g.
-        to download a temporary TSV file and convert to persistent CSV:
-
-        >>> with self.raw_dir.temp_download("http://www.example.com/e.tsv", "example.tsv") as data:
-        ...     self.raw_dir.write_csv('template.csv', self.raw_dir.read_csv(data, delimiter='\t'))
-        """
+        self.raw_dir.xls2csv("ids_cl_maltese_v1.xlsx")
 
     def cmd_makecldf(self, args):
-        """
-        Convert the raw data to a CLDF dataset.
+        glottocode = "malt1254"
+        lang_id = glottocode
+        lang_name = "Maltese"
+        reprs = ["StandardOrth", "Phonetic"]
 
-        A `pylexibank.cldf.LexibankWriter` instance is available as `args.writer`. Use the methods
-        of this object to add data.
-        """
-        data = self.raw_dir.read_csv('template.csv', dicts=True)
+        args.writer.add_concepts(id_factory=lambda c: c.attributes['ids_id'])
+        args.writer.add_sources(*self.raw_dir.read_bib())
 
-        # short cut to add concepts and languages, provided your name spaces
-        # match lexibank's expected format.
-        args.writer.add_concepts()
-        args.writer.add_languages()
+        personnel = self.get_personnel(args)
 
-        # if not, then here is a more detailed way to do it:
-        #for concept in self.concepts:
-        #    args.writer.add_concept(
-        #        ID=concept['ID'],
-        #        Name=concept['ENGLISH'],
-        #        Concepticon_ID=concept['CONCEPTICON_ID']
-        #    )
-        #for language in self.languages:
-        #    args.writer.add_language(
-        #        ID=language['ID'],
-        #        Glottolog=language['Glottolog']
-        #    )
+        args.writer.add_language(
+            ID=glottocode,
+            Name="Maltese",
+            Glottocode=glottocode,
+            Authors=personnel['author'],
+            DataEntry=personnel['data entry'],
+            Consultants=personnel['consultant'],
+            Representations=reprs,
+            date='2020-09-17',
+        )
 
-        # add data
-        for row in pylexibank.progressbar(data):
-            # .. if you have segmentable data, replace `add_form` with `add_form_with_segments`
-            # .. TODO @Mattis, when should we use add_forms_from_value() instead?
-            lex = args.writer.add_form(
-                Language_ID=row['Language_ID'],
-                Parameter_ID=row['Parameter_ID'],
-                Value=row['Word'],
-                Form=row['Word'],
-                Source=[row['Source']],
-            )
-            # add cognates -- make sure Cognateset_ID is global!
-            args.writer.add_cognate(
-                lexeme=lex,
-                Cognateset_ID=row['Cognateset_ID']
-            )
+        for form in pylexibank.progressbar(self.read_csv("ids_cl_maltese_v1.idsclldorg.csv")):
+            if form.form:
+                args.writer.add_lexemes(
+                    Language_ID=glottocode,
+                    Parameter_ID=form.ids_id,
+                    Value=form.form,
+                    Comment=form.comment,
+                    Source="spagnol2020",
+                    Transcriptions=reprs,
+                    AlternativeValues=form.alt_forms,
+                )
+
+        self.apply_cldf_defaults(args)
+
+    def entry_from_row(self, row, k):
+
+        def parse_comment(form, org_comment):
+            if '[' in form:
+                r = [i.strip() for i in ''.join(form.rsplit(']', 1)).split('[', 1)]
+                if r[1]:
+                    comment = '[{0}]'.format(r[1])
+                else:
+                    comment = ''
+                if org_comment:
+                    return r[0], '{0} {1}'.format(org_comment, comment)
+                else:
+                    return r[0], comment
+            else:
+                return form, org_comment
+
+        form, comment = parse_comment(row[k], row[9])
+
+        # specific case for ';'
+        if ';' in form:
+            entries = []
+            comments = [c.strip() for c in comment.split(',')]
+            forms = [i.strip() for i in form.split(';')]
+            alt_forms = [i.strip() for i in row[k+1].split(';')]
+            for i, f in enumerate(forms):
+                try:
+                    alt_form = alt_forms[i]
+                except IndexError:
+                    alt_form = alt_forms[0]
+                if len(comments) > 0:
+                    try:
+                        comment = comments[i]
+                    except IndexError:
+                        comment = comments[0]
+                    if comment:
+                        if comment[0] != '[':
+                            comment = '[' + comment
+                        if comment[-1] != ']':
+                            comment += ']'
+                else:
+                    comment = ''
+                entries.append(
+                    IDSEntry(
+                            "%s-%s" % (row[0], row[1]),
+                            f,
+                            alt_form,
+                            comment
+                        )
+                )
+            return entries
+
+        # specific case for '/'
+        if '/' in form:
+            entries = []
+            forms = [i.strip() for i in form.split(' ')]
+            alt_forms = [i.strip() for i in row[k+1].split(' ')]
+            if len(forms) == 2 and len(alt_forms) == 2:
+                for i, f in enumerate(forms):
+                    if '/' in f:
+                        sf = [i.strip() for i in f.split('/')]
+                        af = [i.strip() for i in alt_forms[i].split('/')]
+                        if i == 0:
+                            entries.append(
+                                IDSEntry(
+                                        "%s-%s" % (row[0], row[1]),
+                                        '{0} {1}'.format(sf[0], forms[1]),
+                                        '{0} {1}'.format(af[0], alt_forms[1]),
+                                        comment
+                                    )
+                            )
+                            entries.append(
+                                IDSEntry(
+                                        "%s-%s" % (row[0], row[1]),
+                                        '{0} {1}'.format(sf[1], forms[1]),
+                                        '{0} {1}'.format(af[1], alt_forms[1]),
+                                        comment
+                                    )
+                            )
+                            break
+                        elif i == 1:
+                            entries.append(
+                                IDSEntry(
+                                        "%s-%s" % (row[0], row[1]),
+                                        '{0} {1}'.format(forms[0], sf[0]),
+                                        '{0} {1}'.format(alt_forms[0], af[0]),
+                                        comment
+                                    )
+                            )
+                            entries.append(
+                                IDSEntry(
+                                        "%s-%s" % (row[0], row[1]),
+                                        '{0} {1}'.format(forms[0], sf[1]),
+                                        '{0} {1}'.format(alt_forms[0], af[1]),
+                                        comment
+                                    )
+                            )
+                            break
+            if len(entries) != 2:
+                args.log.warn("Please check {0} for balanced '/'".format(form))
+            return entries
+
+        # specific case for ','
+        if ',' in form:
+            entries = []
+            forms = [i.strip() for i in form.split(',')]
+            alt_forms = [i.strip() for i in row[k+1].split(',')]
+            for i, f in enumerate(forms):
+                try:
+                    alt_form = alt_forms[i]
+                except IndexError:
+                    alt_form = alt_forms[0]
+                entries.append(
+                    IDSEntry(
+                            "%s-%s" % (row[0], row[1]),
+                            f,
+                            alt_form,
+                            comment
+                        )
+                )
+            return entries
+
+        return IDSEntry(
+                        "%s-%s" % (row[0], row[1]),
+                        form,
+                        row[k+1],
+                        comment
+                    )
+
+    def read_csv(self, fname):
+        for i, row in enumerate(self.raw_dir.read_csv(fname)):
+            row = [c.strip() for c in row[0:15]]
+            if i > 0:
+                row[0:2] = [int(float(c)) for c in row[0:2]]
+                for k in [3, 5, 7, 10, 12, 14]:
+                    if row[k]:
+                        r = self.entry_from_row(row, k)
+                        if isinstance(r, list):
+                            for m in r:
+                                yield m
+                        else:
+                            yield r
