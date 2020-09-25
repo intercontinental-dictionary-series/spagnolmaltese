@@ -1,5 +1,9 @@
 # Maltese Dictionary by Michael Spagnol and Bernard Comrie
 
+Cite the source dataset as
+
+> Michael Spagnol and Bernard Comrie. 2020. Maltese dictionary. In: Key, Mary Ritchie & Comrie, Bernard (eds.) The Intercontinental Dictionary Series. Leipzig: Max Planck Institute for Evolutionary Anthropology. (Available online at http://ids.clld.org/)
+
 This dataset is licensed under a CC-BY-4.0 license
 
 
