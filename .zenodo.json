@@ -1,0 +1,34 @@
+{
+    "title": "Maltese Dictionary by Michael Spagnol and Bernard Comrie",
+    "access_right": "open",
+    "keywords": [
+        "cldf:Wordlist",
+        "linguistics"
+    ],
+    "creators": [
+        {
+            "name": "Michael Spagnol"
+        },
+        {
+            "name": "Bernhard Comrie"
+        },
+        {
+            "name": "Hans-J\u00f6rg Bibiko"
+        }
+    ],
+    "contributors": [
+        {
+            "name": "Michael Spagnol",
+            "type": "DataCurator"
+        }
+    ],
+    "communities": [
+        {
+            "identifier": "lexibank"
+        }
+    ],
+    "upload_type": "dataset",
+    "license": {
+        "id": "CC-BY-4.0"
+    }
+}
