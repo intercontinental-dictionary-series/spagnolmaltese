@@ -30,5 +30,6 @@
     "upload_type": "dataset",
     "license": {
         "id": "CC-BY-4.0"
-    }
+    },
+    "description": "<p>Cite the source of the dataset as:</p>\n\n<blockquote>\n<p>Michael Spagnol and Bernard Comrie. 2020. Maltese dictionary. In: Key, Mary Ritchie &amp; Comrie, Bernard (eds.) The Intercontinental Dictionary Series. Leipzig: Max Planck Institute for Evolutionary Anthropology. (Available online at http://ids.clld.org/)</p>\n</blockquote>"
 }
