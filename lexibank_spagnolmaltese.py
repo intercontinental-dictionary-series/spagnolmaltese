@@ -8,6 +8,8 @@ class Dataset(IDSDataset):
     dir = pathlib.Path(__file__).parent
     id = "spagnolmaltese"
 
+    IDSDataset.form_spec.strip_inside_brackets = True
+
     def cmd_download(self, args):
         self.raw_dir.xls2csv("ids_cl_maltese_v1.xlsx")
 
