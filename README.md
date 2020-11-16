@@ -1,4 +1,4 @@
-# Maltese Dictionary by Michael Spagnol and Bernard Comrie
+# Maltese IDS wordlist by Michael Spagnol and Bernard Comrie
 
 Cite the source dataset as
 
