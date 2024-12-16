@@ -16,13 +16,13 @@
         {
             "rdf:about": "https://github.com/intercontinental-dictionary-series/spagnolmaltese",
             "rdf:type": "prov:Entity",
-            "dc:created": "v1.0-2-g0897477",
+            "dc:created": "v1.0-3-g323829f",
             "dc:title": "Repository"
         },
         {
             "rdf:about": "git@github.com:glottolog/glottolog",
             "rdf:type": "prov:Entity",
-            "dc:created": "v5.0",
+            "dc:created": "v5.1",
             "dc:title": "Glottolog"
         },
         {

@@ -38,7 +38,6 @@ class Dataset(IDSDataset):
 
         for form in pylexibank.progressbar(self.read_csv("ids_cl_maltese_v1.idsclldorg.csv")):
             if form.form:
-                print(form.alt_forms[0])
                 args.writer.add_form(
                     Language_ID=glottocode,
                     Parameter_ID=form.ids_id,
