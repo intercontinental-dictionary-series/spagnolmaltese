@@ -41,34 +41,34 @@ d	d	108	U+0064
 ʃ	ʃ	60	U+0283
 ˈɐː	ɐː	58	U+02c8 U+0250 U+02d0
 ʤ	dʒ	58	U+02a4
-tt	tt	56	U+0074 U+0074
+tt	tː	56	U+0074 U+0074
 z	z	54	U+007a
 ʧ	tʃ	49	U+02a7
 ˈz	z	47	U+02c8 U+007a
-ll	ll	45	U+006c U+006c
+ll	lː	45	U+006c U+006c
 w	w	45	U+0077
 ˈj	j	42	U+02c8 U+006a
 ˈw	w	37	U+02c8 U+0077
 ɔː	ɔː	32	U+0254 U+02d0
 ˈʧ	tʃ	31	U+02c8 U+02a7
-rr	rr	30	U+0072 U+0072
-ss	ss	30	U+0073 U+0073
+rr	rː	30	U+0072 U+0072
+ss	sː	30	U+0073 U+0073
 ˈɐ	ɐ	28	U+02c8 U+0250
 ɛː	ɛː	25	U+025b U+02d0
 ˈɪ	ɪ	24	U+02c8 U+026a
-jj	jj	23	U+006a U+006a
-mm	mm	22	U+006d U+006d
+jj	jː	23	U+006a U+006a
+mm	mː	22	U+006d U+006d
 v	v	21	U+0076
-nn	nn	21	U+006e U+006e
-ʃʃ	ʃʃ	21	U+0283 U+0283
-dd	dd	20	U+0064 U+0064
-pp	pp	19	U+0070 U+0070
-ww	ww	18	U+0077 U+0077
+nn	nː	21	U+006e U+006e
+ʃʃ	ʃː	21	U+0283 U+0283
+dd	dː	20	U+0064 U+0064
+pp	pː	19	U+0070 U+0070
+ww	wː	18	U+0077 U+0077
 ˈv	v	17	U+02c8 U+0076
-kk	kk	16	U+006b U+006b
+kk	kː	16	U+006b U+006b
 ʊː	ʊː	16	U+028a U+02d0
 ˈʦ	ts	15	U+02c8 U+02a6
-ʧʧ	ʧʧ	15	U+02a7 U+02a7
+ʧʧ	ʧː	15	U+02a7 U+02a7
 ʦ	ts	14	U+02a6
 ˈɔ	ɔ	14	U+02c8 U+0254
 ˈɡ	g	13	U+02c8 U+0261
@@ -76,72 +76,72 @@ kk	kk	16	U+006b U+006b
 ˈɛː	ɛː	13	U+02c8 U+025b U+02d0
 ˈg	g	13	U+02c8 U+0067
 g	g	13	U+0067
-bb	bb	12	U+0062 U+0062
-ʦʦ	ʦʦ	11	U+02a6 U+02a6
+bb	bː	12	U+0062 U+0062
+ʦʦ	ʦː	11	U+02a6 U+02a6
 ˈɔː	ɔː	10	U+02c8 U+0254 U+02d0
 ɱ	ɱ	9	U+0271
-ʤʤ	ʤʤ	9	U+02a4 U+02a4
+ʤʤ	ʤː	9	U+02a4 U+02a4
 ˈɛ	ɛ	9	U+02c8 U+025b
 ŋ	ŋ	8	U+014b
-ʔʔ	ʔʔ	8	U+0294 U+0294
-ff	ff	7	U+0066 U+0066
-fs	fs	7	U+0066 U+0073
-hh	hh	6	U+0068 U+0068
+ʔʔ	ʔː	8	U+0294 U+0294
+ff	fː	7	U+0066 U+0066
+fs	f s	7	U+0066 U+0073
+hh	hː	6	U+0068 U+0068
 ˈiː	iː	5	U+02c8 U+0069 U+02d0
 ˈɪː	ɪː	4	U+02c8 U+026a U+02d0
-ns	ns	4	U+006e U+0073
-gw	gw	4	U+0067 U+0077
+ns	n s	4	U+006e U+0073
+gw	g w	4	U+0067 U+0077
 ˈx	x	3	U+02c8 U+0078
 ˈuː	uː	3	U+02c8 U+0075 U+02d0
-rs	rs	3	U+0072 U+0073
-lw	lw	3	U+006c U+0077
-js	js	3	U+006a U+0073
-ʔs	ʔs	3	U+0294 U+0073
-ˈtw	ˈtw	3	U+02c8 U+0074 U+0077
-ps	ps	3	U+0070 U+0073
-ˈgw	ˈgw	3	U+02c8 U+0067 U+0077
-dw	dw	3	U+0064 U+0077
+rs	r s	3	U+0072 U+0073
+lw	l w	3	U+006c U+0077
+js	j s	3	U+006a U+0073
+ʔs	ʔ s	3	U+0294 U+0073
+ˈtw	ˈt w	3	U+02c8 U+0074 U+0077
+ps	p s	3	U+0070 U+0073
+ˈgw	ˈg w	3	U+02c8 U+0067 U+0077
+dw	d w	3	U+0064 U+0077
 ˈkw	kʷ	3	U+02c8 U+006b U+0077
-tw	tw	3	U+0074 U+0077
+tw	t w	3	U+0074 U+0077
 ph	pʰ	3	U+0070 U+0068
 u	u	3	U+0075
-ˈsw	ˈsw	2	U+02c8 U+0073 U+0077
-ˈsh	ˈsh	2	U+02c8 U+0073 U+0068
-ˈzw	ˈzw	2	U+02c8 U+007a U+0077
+ˈsw	ˈs w	2	U+02c8 U+0073 U+0077
+ˈsh	ˈs h	2	U+02c8 U+0073 U+0068
+ˈzw	ˈz w	2	U+02c8 U+007a U+0077
 ˈʊ	ʊ	2	U+02c8 U+028a
-ks	ks	2	U+006b U+0073
-hʃ	hʃ	2	U+0068 U+0283
+ks	k s	2	U+006b U+0073
+hʃ	h ʃ	2	U+0068 U+0283
 th	tʰ	2	U+0074 U+0068
-lh	lh	2	U+006c U+0068
-mh	mh	2	U+006d U+0068
+lh	l h	2	U+006c U+0068
+mh	m h	2	U+006d U+0068
 -	NULL	2	U+002d
-ˈʃh	ˈʃh	2	U+02c8 U+0283 U+0068
-sw	sw	2	U+0073 U+0077
+ˈʃh	ˈʃ h	2	U+02c8 U+0283 U+0068
+sw	s w	2	U+0073 U+0077
 kw	kʷ	2	U+006b U+0077
 ʣ	dz	2	U+02a3
 ˈʣ	dz	2	U+02c8 U+02a3
-mʃ	mʃ	1	U+006d U+0283
-zz	zz	1	U+007a U+007a
-ˈfw	ˈfw	1	U+02c8 U+0066 U+0077
-ls	ls	1	U+006c U+0073
-ˈps	ˈps	1	U+02c8 U+0070 U+0073
-ˈfs	ˈfs	1	U+02c8 U+0066 U+0073
-rh	rh	1	U+0072 U+0068
-fh	fh	1	U+0066 U+0068
-ˈhʃ	ˈhʃ	1	U+02c8 U+0068 U+0283
-ˈhw	ˈhw	1	U+02c8 U+0068 U+0077
-ˈɡw	ˈgw	1	U+02c8 U+0261 U+0077
+mʃ	m ʃ	1	U+006d U+0283
+zz	zː	1	U+007a U+007a
+ˈfw	ˈf w	1	U+02c8 U+0066 U+0077
+ls	l s	1	U+006c U+0073
+ˈps	ˈp s	1	U+02c8 U+0070 U+0073
+ˈfs	ˈf s	1	U+02c8 U+0066 U+0073
+rh	r h	1	U+0072 U+0068
+fh	f h	1	U+0066 U+0068
+ˈhʃ	ˈh ʃ	1	U+02c8 U+0068 U+0283
+ˈhw	ˈh w	1	U+02c8 U+0068 U+0077
+ˈɡw	ˈg w	1	U+02c8 U+0261 U+0077
 i	i	1	U+0069
-ɡɡ	gg	1	U+0261 U+0261
-wh	wh	1	U+0077 U+0068
-zw	zw	1	U+007a U+0077
-jh	jh	1	U+006a U+0068
-ˈhs	ˈhs	1	U+02c8 U+0068 U+0073
+ɡɡ	gː	1	U+0261 U+0261
+wh	w h	1	U+0077 U+0068
+zw	z w	1	U+007a U+0077
+jh	j h	1	U+006a U+0068
+ˈhs	ˈh s	1	U+02c8 U+0068 U+0073
 ʒ	ʒ	1	U+0292
-ms	ms	1	U+006d U+0073
+ms	m s	1	U+006d U+0073
 kh	kʰ	1	U+006b U+0068
-hw	hw	1	U+0068 U+0077
+hw	h w	1	U+0068 U+0077
 ˈph	pʰ	1	U+02c8 U+0070 U+0068
 ˈth	tʰ	1	U+02c8 U+0074 U+0068
-ws	ws	1	U+0077 U+0073
+ws	w s	1	U+0077 U+0073
 'm	m	1	U+0027 U+006d
