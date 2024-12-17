@@ -9,6 +9,7 @@ class Dataset(IDSDataset):
     id = "spagnolmaltese"
 
     IDSDataset.form_spec.strip_inside_brackets = True
+    IDSDataset.form_spec.separators = ["/", ";", ","]
 
     def cmd_download(self, args):
         self.raw_dir.xls2csv("ids_cl_maltese_v1.xlsx")
@@ -37,10 +38,11 @@ class Dataset(IDSDataset):
 
         for form in pylexibank.progressbar(self.read_csv("ids_cl_maltese_v1.idsclldorg.csv")):
             if form.form:
-                args.writer.add_lexemes(
+                args.writer.add_form(
                     Language_ID=glottocode,
                     Parameter_ID=form.ids_id,
                     Value=form.form,
+                    Form=self.form_spec.split(form.form, form.alt_forms[0])[0],
                     Comment=form.comment,
                     Source="spagnol2020",
                     Transcriptions=reprs,

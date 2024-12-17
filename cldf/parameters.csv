@@ -15,7 +15,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 1-280,cave,1155,CAVE
 1-310,water,948,WATER
 1-320,sea,1474,SEA
-1-322,calm (of sea),,
+1-322,calm (of sea),3820,CALM (OF SEA)
 1-323,rough (of sea),259,ROUGH (OF SEA)
 1-324,foam,1768,FOAM
 1-329,ocean,645,OCEAN
@@ -63,6 +63,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 1-820,flame (noun),889,FLAME
 1-830,smoke (noun),778,SMOKE (EXHAUST)
 1-840,ashes,646,ASH
+1-841,embers,67,EMBERS
 1-851,burn (vb trans),141,BURN (SOMETHING)
 1-852,burn (vb intrans),1428,BURNING
 1-860,"light, kindle, ignite",737,LIGHT (IGNITE)
@@ -79,6 +80,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 2-251,young man (adolescent),76,YOUNG MAN
 2-260,girl,1646,GIRL
 2-261,young woman (adolescent),77,YOUNG WOMAN
+2-270,child,1304,CHILD (YOUNG HUMAN)
 2-280,"infant, baby",1289,BABY
 2-310,husband,1200,HUSBAND
 2-320,wife,1199,WIFE
@@ -99,6 +101,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 2-450,sister,1263,SISTER
 2-454,older sister,1758,OLDER SISTER
 2-455,younger sister,1761,YOUNGER SISTER
+2-456,sibling,1640,SIBLING
 2-458,twins,1005,TWINS
 2-460,grandfather,1383,GRANDFATHER
 2-461,old man,406,OLD MAN
@@ -138,6 +141,8 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 2-920,you (singular),1215,THOU
 2-930,he/she/it,262,HE OR SHE OR IT
 2-940,we,1212,WE
+2-941,we (inclusive),1131,WE (INCLUSIVE)
+2-942,we (exclusive),1130,WE (EXCLUSIVE)
 2-950,you (plural),1213,YOU
 2-960,they,817,THEY
 3-110,animal,619,ANIMAL
@@ -149,17 +154,19 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 3-190,"stable, stall",851,STABLE
 3-200,cattle (bovine),1153,CATTLE
 3-210,bull,1008,BULL
+3-220,ox,1169,OX
 3-230,cow,1007,COW
 3-240,calf,1989,CALF
 3-250,sheep,1331,SHEEP
 3-260,ram,1344,RAM
+3-280,ewe,1345,EWE
 3-290,lamb,820,LAMB
 3-320,boar,1348,BOAR (MALE PIG)
 3-340,sow (2),1351,SOW (FEMALE PIG)
 3-350,pig,1337,PIG
 3-360,goat,1502,GOAT
 3-370,he-goat,2475,MALE GOAT
-3-380,kid,1972,KID
+3-380,kid,1972,YOUNG GOAT (KID)
 3-410,horse (equine),615,HORSE
 3-420,stallion,936,STALLION
 3-440,mare,938,MARE
@@ -169,6 +176,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 3-500,fowl,265,FOWL
 3-520,"cock, rooster",1511,ROOSTER
 3-540,hen,1514,HEN
+3-550,chicken,1318,CHICKEN
 3-560,goose,1187,GOOSE
 3-570,duck,1360,DUCK
 3-580,nest,539,NEST
@@ -221,6 +229,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 3-822,beehive,88,BEEHIVE
 3-823,wasp,1517,WASP
 3-830,fly,1504,FLY (INSECT)
+3-831,"sandfly (midge), gnat",95,SANDFLY
 3-832,mosquito,1509,MOSQUITO
 3-840,worm,1219,WORM
 3-850,snake,730,SNAKE
@@ -238,6 +247,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 4-140,hair (head),2648,HAIR (HEAD)
 4-142,beard,678,BEARD
 4-144,body hair,189,HAIR (BODY)
+4-145,pubic hair,36,PUBIC HAIR
 4-146,dandruff,576,DANDRUFF
 4-150,blood,946,BLOOD
 4-151,"vein, artery",525,BLOOD VESSEL
@@ -454,8 +464,10 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 5-880,cheese,1569,CHEESE
 5-890,butter,1245,BUTTER
 5-900,"beverage, drink",731,BEVERAGE
+5-910,mead,941,MEAD
 5-920,wine,1524,WINE
 5-930,beer,1639,BEER
+5-940,fermented drink,404,ALCOHOL (FERMENTED DRINK)
 5-970,egg,744,EGG
 5-971,egg yolk,1556,YOLK
 6-110,put on (clothes),158,PUT ON
@@ -485,6 +497,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 6-440,shirt,1622,SHIRT
 6-450,collar,2012,COLLAR
 6-460,skirt,1600,SKIRT
+6-461,grass-skirt,328,GRASS-SKIRT
 6-480,trousers,809,TROUSERS
 6-490,"stocking, sock",329,STOCKING
 6-510,shoe,1381,SHOE
@@ -504,6 +517,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 6-750,necklace,1961,NECKLACE
 6-760,bead,1860,BEAD
 6-770,earring,770,EARRING
+6-780,"headband, headdress",3457,HEADBAND OR HEADDRESS
 6-790,tattoo,68,TATTOO
 6-810,"handkerchief, rag",332,RAG
 6-820,towel,1021,TOWEL
@@ -517,9 +531,12 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 7-110,"dwell, live",363,"DWELL (LIVE, RESIDE)"
 7-120,house,1252,HOUSE
 7-130,hut,1678,HUT
+7-131,garden-house,403,GARDEN-HOUSE
 7-140,tent,1316,TENT
 7-150,"yard, court",736,YARD
+7-160,men's house,408,MEN'S HOUSE
 7-170,cookhouse,334,COOKHOUSE
+7-180,meeting house,335,MEETING HOUSE
 7-210,room,1450,ROOM
 7-220,"door, gate",1567,DOOR
 7-221,"doorpost, jamb",80,DOORPOST
@@ -543,6 +560,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 7-470,shelf,745,SHELF
 7-480,trough,205,TROUGH
 7-510,roof,769,ROOF
+7-520,thatch,279,THATCH
 7-530,ridgepole,280,RIDGEPOLE
 7-540,rafter,829,RAFTER
 7-550,beam,1132,BEAM
@@ -552,6 +570,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 7-610,mason,877,MASON
 7-620,brick,1006,BRICK
 7-630,mortar,1731,MORTAR BINDER
+7-640,adobe,901,ADOBE
 8-110,farmer,979,FARMER
 8-120,field (for cultivation),212,FIELD
 8-130,garden,586,GARDEN
@@ -591,6 +610,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 8-600,tree,906,TREE
 8-610,oak,644,OAK
 8-620,beech,1950,BEECH
+8-630,birch,1855,BIRCH
 8-640,pine,1740,PINE
 8-650,fir,1915,FIR
 8-660,acorn,968,ACORN
@@ -600,17 +620,22 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 8-691,pipe,1124,PIPE
 8-720,tree stump,241,TREE STUMP
 8-730,tree trunk,344,TREE TRUNK
+8-740,forked branch,409,FORKED BRANCH
 8-750,bark,1204,BARK
 8-760,sap,345,SAP
 8-810,palm tree,1181,PALM TREE
 8-820,coconut,970,COCONUT
 8-830,citrus fruit,1126,CITRUS FRUIT
 8-840,banana tree,1795,BANANA TREE
+8-850,banyan,346,BANYAN
 8-910,sweet potato,159,SWEET POTATO
+8-912,yam,410,YAM
+8-920,"tapioca, manioc, cassava",925,CASSAVA
 8-930,gourd,411,GOURD
 8-931,"pumpkin, squash",864,PUMPKIN
 8-940,bamboo,1927,BAMBOO
 8-941,sugar cane,146,SUGAR CANE
+8-960,fish poison (root),348,FISH POISON
 8-970,nettle,33,NETTLE
 8-980,mushroom,641,MUSHROOM
 9-110,"do, make",2575,DO OR MAKE
@@ -733,6 +758,10 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 10-560,approach,1778,APPROACH
 10-570,enter,749,ENTER
 10-610,carry (bear),700,CARRY
+10-612,carry-in-hand,412,CARRY IN HAND
+10-613,carry-on-shoulder,413,CARRY ON SHOULDER
+10-614,carry-on-head,414,CARRY ON HEAD
+10-615,carry-underarm,415,CARRY UNDER ARM
 10-620,bring,692,BRING
 10-630,send,1127,SEND
 10-640,lead (vb),43,LEAD (GUIDE)
@@ -749,6 +778,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 10-810,ship,740,SHIP
 10-830,boat,1844,BOAT
 10-831,canoe,1970,CANOE
+10-832,outrigger,416,OUTRIGGER
 10-840,raft,1664,RAFT
 10-850,oar,3137,OAR
 10-851,paddle (noun),234,PADDLE
@@ -1174,6 +1204,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 19-410,master,383,MASTER
 19-420,slave,812,SLAVE
 19-430,servant,255,SERVANT
+19-440,freeman,384,FREEMAN
 19-450,"command, order",1998,COMMAND
 19-460,obey,1635,OBEY
 19-470,"let, permit",3237,ALLOW OR PERMIT
@@ -1182,6 +1213,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 19-540,neighbor,1332,NEIGHBOUR
 19-550,stranger,791,STRANGER
 19-560,guest,1782,GUEST
+19-570,host,1545,HOST
 19-580,"help, aid",1897,HELP
 19-590,"hinder, prevent",3201,HINDER OR PREVENT
 19-610,custom,1747,CUSTOM
@@ -1196,6 +1228,7 @@ ID,Name,Concepticon_ID,Concepticon_Gloss
 20-170,soldier,1941,SOLDIER
 20-210,"weapons, arms",951,WEAPONS
 20-220,club,1763,CLUB
+20-222,battle-ax,386,BATTLE-AXE
 20-230,sling,387,SLING
 20-240,bow,994,BOW
 20-250,arrow,977,ARROW

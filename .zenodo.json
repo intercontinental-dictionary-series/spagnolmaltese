@@ -20,6 +20,18 @@
         {
             "name": "Michael Spagnol",
             "type": "DataCurator"
+        },
+        {
+            "name": "Robert Forkel",
+            "type": "Editor"
+        },
+        {
+            "name": "Johann-Mattis List",
+            "type": "Other"
+        },
+        {
+            "name": "Jessica Nieder",
+            "type": "Other"
         }
     ],
     "communities": [
